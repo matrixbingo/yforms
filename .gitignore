@@ -17,6 +17,9 @@
 .umi
 .umi-production
 
+#webstorm
+.idea
+
 /.history
 /.vscode
 /coverage
