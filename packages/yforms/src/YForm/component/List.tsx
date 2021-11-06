@@ -26,7 +26,7 @@ export interface YFormListComponentProps {
 export interface YFormListItems {
   index: number;
   field: { name: number; key: number; fieldKey: number; isListField?: boolean };
-  add: () => void;
+  add: (data?: any) => void;
   remove: (index: number) => void;
   move: (from: number, to: number) => void;
   icons: React.ReactNode;

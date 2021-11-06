@@ -1,12 +1,11 @@
 {
-  "name": "yforms",
-  "version": "1.4.3",
-  "description": "自定义表单组件",
+  "name": "aem-ui-forms",
+  "version": "1.0.4",
+  "description": "aem-ui-forms",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "authors": {
-    "name": "crazyair",
-    "email": "645381995@qq.com"
+    "name": "em-ui-forms"
   },
   "files": [
     "es",
@@ -26,24 +25,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/crazyair/yforms",
-    "directory": "yforms"
+    "url": "http://github.com/matrixbingo/aem-ui-forms",
+    "directory": "aem-ui-forms"
   },
-  "homepage": "http://github.com/crazyair/yforms",
-  "bugs": "http://github.com/crazyair/yforms/issues",
+  "homepage": "http://github.com/matrixbingo/aem-ui-forms",
+  "bugs": "http://github.com/matrixbingo/em-ui-forms/issues",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
-    "antd": "4.x",
-    "@ant-design/icons": "^4.x"
+    "@ant-design/icons": "^4.x",
+    "antd": "4.x"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "ahooks": "^2.9.2",
     "immutable": "^4.0.0-rc.12",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "numbro": "^2.3.2",
     "nzh": "^1.0.4",
