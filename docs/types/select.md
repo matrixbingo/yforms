@@ -16,6 +16,10 @@ nav:
 
 <code src="./demo/getOptions.tsx" />
 
+## 用例1
+
+<code src="./demo/treeSelect.tsx" />
+
 ### 共同的 API
 
 - 以下 API 为 `checkboxGroup` `radio` `select` 共享的 API。
