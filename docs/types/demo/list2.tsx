@@ -13,15 +13,18 @@ import { YFormInstance } from 'yforms/lib/YForm/Form';
 import { YFormItemsType } from 'yforms/lib/YForm/ItemsType';
 import { TreeSelectSingle } from './treeSelect';
 import {data1, data2} from './json/treeData';
+import InputForm, { InputFormProps } from './InputForm';
 
 declare module 'yforms/lib/YForm/ItemsType' {
   export interface YFormItemsTypeDefine {
     treeSelectSingle: { componentProps?: { str?: string } };
+    inputForm: { componentProps?: InputFormProps };
   }
 }
 
 export const itemsType: YFormItemsType = {
   treeSelectSingle: { component: <TreeSelectSingle /> },
+  inputForm: { component: <InputForm /> },
 };
 YForm.Config({ itemsType });
 
@@ -270,8 +273,17 @@ export default () => {
                                             const fieldsValue = getFieldValue([condition, index0, rules, index1]);
                                             const inputDisabled = disabledOpts.includes(fieldsValue?.function);
                                             if (inputDisabled) {
-                                              updateValue(index0, index1, '');
+                                             // updateValue(index0, index1, '');
                                             }
+                                            const inputForm = [{
+                                              noStyle: true,
+                                              type: 'inputForm',
+                                              name: [0],
+                                              rules: [{ required: false }],
+                                              componentProps: {
+                                                disabled: inputDisabled,
+                                              },
+                                            }]
                                             const items = [{
                                               noStyle: true,
                                               type: 'input',
@@ -297,7 +309,7 @@ export default () => {
                                                 noStyle: true,
                                                 name: [index1, 'params'],
                                                 componentProps: { oneLineStyle: ['90%'], showIcons: { showBottomAdd: false, showAdd: false, showRemove: false } },
-                                                items: () => items,
+                                                items: () => inputDisabled?inputForm:items,
                                               },
                                             ];
                                           },
